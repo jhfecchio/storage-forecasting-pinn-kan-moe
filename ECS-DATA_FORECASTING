@@ -1,0 +1,369 @@
+RELOAD EVERYTHING - MLP COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : mlp
+Window                 : 24
+Epochs                 : 200
+Batch size             : 64
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+
+📊 Metrics
+Final train loss       : 0.001170
+Final val loss         : 0.002924
+MSE train diff         : 2.002790e+21
+RMSE train diff        : 4.475254e+10
+R² train diff          : 0.224174
+MSE test diff          : 4.993047e+21
+RMSE test diff         : 7.066150e+10
+R² test diff           : 0.484533
+MSE abs                : 1.711973e+24
+RMSE abs               : 1.308424e+12
+R² abs                 : 0.964315
+Final forecast TB      : 813.497
+
+📐 Shapes
+X_train_mlp            : (4315, 24)
+y_train_mlp            : (4315, 1)
+X_test_mlp             : (1061, 24)
+y_test_mlp             : (1061, 1)
+y_pred_inv_mlp         : (1061,)
+y_test_abs_mlp         : (1061,)
+forecast_abs_mlp_tb    : (8640,)
+
+MLP Comparison Train vs Validation:
+Metric     |           Train |      Validation
+---------------------------------------------
+MSE        |      2.0028e+21 |      4.9930e+21
+RMSE       |      4.4753e+10 |      7.0661e+10
+R²         |          0.2242 |          0.4845
+
+MLP - Metrics in ABSOLUTE scale (reconstructed):
+MSE(abs)  = 1.7120e+24
+RMSE(abs) = 1.3084e+12
+R²(abs)   = 0.9643
+Window    = 24
+Batch     = 64
+
+---------------------------------------------------------------------------------------------
+
+RELOAD EVERYTHING - LSTM COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : lstm
+Window                 : 24
+Epochs                 : 200
+Batch size             : 64
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Train size             : 4339
+
+📊 Final training losses
+Final train loss       : 0.001243
+Final val loss         : 0.010607
+
+📊 Metrics in differenced/original-delta scale
+MSE train              : 2.125525e+21
+RMSE train             : 4.610342e+10
+R² train               : 0.176630
+MSE test               : 1.811242e+22
+RMSE test              : 1.345824e+11
+R² test                : -0.869870
+
+📊 Metrics in absolute scale
+MSE abs                : 4.410090e+26
+RMSE abs               : 2.100021e+13
+R² abs                 : -8.192596
+Final forecast TB      : 633.844
+
+📐 Shapes
+X_train_lstm           : (4315, 24, 1)
+y_train_lstm           : (4315, 1)
+X_test_lstm            : (1061, 24, 1)
+y_test_lstm            : (1061, 1)
+y_pred_inv_lstm        : (1061,)
+y_test_abs_lstm        : (1061,)
+forecast_abs_lstm_tb   : (8640,)
+
+
+LSTM Comparison Train vs Validation:
+Metric     |           Train |      Validation
+---------------------------------------------
+MSE        |      2.1255e+21 |      1.8112e+22
+RMSE       |      4.6103e+10 |      1.3458e+11
+R²         |          0.1766 |         -0.8699
+Window    = 24
+Batch     = 64
+
+
+LSTM - Metrics in ABSOLUTE scale (reconstructed):
+Window    = 24
+Batch     = 64
+MSE(abs)  = 4.4101e+26
+RMSE(abs) = 2.1000e+13
+R²(abs)   = -8.1926
+
+---------------------------------------------------------------------------------------------
+
+RELOAD EVERYTHING - GRU COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : gru
+Window                 : 24
+Epochs                 : 200
+Batch size             : 64
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Train size             : 4339
+
+📊 Final training losses
+Final train loss       : 0.001678
+Final val loss         : 0.005240
+
+📊 Metrics in differenced/original-delta scale
+MSE train              : 2.490033e+21
+RMSE train             : 4.990023e+10
+R² train               : 0.035430
+MSE test               : 8.392926e+21
+RMSE test              : 9.161292e+10
+R² test                : 0.133540
+
+📊 Metrics in absolute scale
+MSE abs                : 4.915329e+24
+RMSE abs               : 2.217054e+12
+R² abs                 : 0.897543
+Final forecast TB      : 577.996
+
+📐 Shapes
+X_train_gru            : (4315, 24, 1)
+y_train_gru            : (4315, 1)
+X_test_gru             : (1061, 24, 1)
+y_test_gru             : (1061, 1)
+y_pred_inv_gru         : (1061,)
+y_test_abs_gru         : (1061,)
+forecast_tb_gru        : (8640,)
+
+
+GRU Train vs Validation Comparison:
+Metric     |           Train |      Validation
+---------------------------------------------
+MSE        |      2.4900e+21 |      8.3929e+21
+RMSE       |      4.9900e+10 |      9.1613e+10
+R²         |          0.0354 |          0.1335
+Window    = 24
+Batch     = 64
+
+GRU - Metrics in ABSOLUTE scale (reconstructed):
+MSE(abs)  = 4.9153e+24
+RMSE(abs) = 2.2171e+12
+R²(abs)   = 0.8975
+Window    = 24
+Batch     = 64
+
+
+---------------------------------------------------------------------------------------------
+RELOAD EVERYTHING - PINN COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : pint
+Window                 : 24
+Epochs                 : 200
+Batch size             : 64
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Omega                  : 0.2617993877991494
+Lambda phys            : 0.0010000000474974513
+dt                     : 1.0
+
+📊 Metrics
+Final loss             : 0.001558
+Best val loss          : 0.004142
+MSE train scaled       : 1.537801e-03
+RMSE train scaled      : 3.921480e-02
+R² train scaled        : -0.017232
+MSE test scaled        : 4.199743e-03
+RMSE test scaled       : 6.480542e-02
+R² test scaled         : 0.259630
+MSE abs                : 9.292338e+24
+RMSE abs               : 3.048334e+12
+R² abs                 : 0.806306
+Final forecast TB      : 483.273
+
+📐 Shapes
+X_train_pint           : (4315, 24, 1)
+y_train_pint           : (4315, 1)
+X_test_pint            : (1061, 24, 1)
+y_test_pint            : (1061, 1)
+y_pred_test_seq_pint   : (1061, 24, 1)
+y_test_abs_pint        : (1061,)
+forecast_tb_pint       : (8640,)
+
+PINN Train vs Validation Comparison:
+Metric     |           Train |      Validation
+---------------------------------------------
+MSE        |      2.6260e+21 |      7.1716e+21
+RMSE       |      5.1244e+10 |      8.4685e+10
+R²         |         -0.0172 |          0.2596
+Window    = 24
+Batch     = 64
+lambda    = 0.0010000000474974513
+omega     = 0.2617993950843811
+
+
+---------------------------------------------------------------------------------------------
+
+RELOAD EVERYTHING - TFKAN COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : tfkan
+Window                 : 24
+Epochs                 : 200
+Batch size             : 64
+Forecast steps         : 8640
+Forecast days          : 360
+Forecast steps train   : 1
+Time unit              : hour
+N_FEATURES             : 1
+D_MODEL                : 128
+
+📊 Metrics
+Final train loss       : 0.001072
+Final val loss         : 0.003539
+MSE train diff         : 1.815756e+21
+RMSE train diff        : 4.261169e+10
+R² train diff          : 0.296626
+MSE test diff          : 6.042719e+21
+RMSE test diff         : 7.773493e+10
+R² test diff           : 0.376168
+MSE abs                : 1.247540e+25
+RMSE abs               : 3.532053e+12
+R² abs                 : 0.739957
+Final forecast TB      : 422.000
+
+📐 Shapes
+X_train_tfkan          : (4315, 24, 1)
+y_train_tfkan          : (4315, 1)
+X_test_tfkan           : (1061, 24, 1)
+y_test_tfkan           : (1061, 1)
+y_pred_tfkan_inv       : (1061,)
+y_test_abs_tfkan       : (1061,)
+forecast_abs_tfkan_tb  : (8640,)
+
+
+TFKAN - Metrics in ABSOLUTE scale (reconstructed):
+MSE(abs)  = 1.2475e+25
+RMSE(abs) = 3.5321e+12
+R²(abs)   = 0.7400
+Window    = 24
+Batch     = 64
+
+---------------------------------------------------------------------------------------------
+RELOAD EVERYTHING - EXP COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : exp
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Train size             : 4339
+Window reference       : 24
+
+📊 Metrics
+MSE norm               : 5.699745e-03
+RMSE norm              : 7.549665e-02
+R² norm                : -0.004805
+MSE abs                : 6.333131e+25
+RMSE abs               : 7.958097e+12
+R² abs                 : -0.320107
+Final forecast TB      : 515.014
+
+📐 Shapes
+y_train                : (4315,)
+y_test                 : (1061,)
+y_pred_exp             : (1061,)
+y_test_abs_exp         : (1061,)
+forecast_tb_exp        : (8640,)
+
+
+---------------------------------------------------------------------------------------------
+RELOAD EVERYTHING - ARIMA COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : arima
+Best order             : (5, 1, 1)
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Train size             : 4339
+Window reference       : 24
+Search grid p          : [0, 1, 2, 3, 4, 5]
+Search grid q          : [0, 1, 2, 3, 4, 5]
+d value                : 1
+
+📊 Metrics
+AIC                    : -15979.562411
+BIC                    : -15934.975065
+MSE norm               : 5.679867e-03
+RMSE norm              : 7.536489e-02
+R² norm                : -0.001300
+MSE abs                : 3.093079e+25
+RMSE abs               : 5.561546e+12
+R² abs                 : 0.355264
+Final forecast TB      : 639.005
+
+📐 Shapes
+y_train                : (4315,)
+y_test                 : (1061,)
+y_pred_arima           : (1061,)
+y_test_abs_arima       : (1061,)
+forecast_tb_arima      : (8640,)
+search_results         : 36 models
+
+
+---------------------------------------------------------------------------------------------
+RELOAD EVERYTHING - PROPHET COMPLETED
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/0-TESE/360/08-abr-2026
+Model                  : prophet
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : hour
+Split prophet          : 4340
+Frequency alias        : H
+Is hourly              : True
+Target column          : Value
+
+📊 Metrics
+MSE abs                : 4.757351e+24
+RMSE abs               : 2.181135e+12
+R² abs                 : 0.908009
+Final forecast TB      : 574.086
+
+📐 Shapes
+prophet_df             : (5425, 2)
+train_prophet          : (4340, 2)
+test_prophet           : (1085, 2)
+y_test_abs_prophet     : (1085,)
+y_pred_abs_prophet     : (1085,)
+forecast_tb_prophet    : (8640,)
+
+---------------------------------------------------------------------------------------------
+
+Mixture of Experts — Validação/Teste em TB
+MSE  : 7.541616 TB²
+RMSE : 2.746200 TB
+MAE  : 1.880274 TB
+R²   : 0.842799
+
+📊 Ensembles simples para referência
+Média   -> RMSE=5.027007 TB | R²=0.473244
+Mediana -> RMSE=3.138704 TB | R²=0.794652
+
+🔮 Forecast futuro MoE carregado: 8640 pontos
+Valor final previsto: 810.673 TB
+✅ Pesos futuros carregados: (8640, 8)
+
+
+MOE final forecast value: 810.673 TB
+✅ MoE plots generated successfully after RELOAD.
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
