@@ -31,19 +31,7 @@ y_pred_inv_mlp         : (1061,)
 y_test_abs_mlp         : (1061,)
 forecast_abs_mlp_tb    : (8640,)
 
-MLP Comparison Train vs Validation:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      2.0028e+21 |      4.9930e+21
-RMSE       |      4.4753e+10 |      7.0661e+10
-R²         |          0.2242 |          0.4845
 
-MLP - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 1.7120e+24
-RMSE(abs) = 1.3084e+12
-R²(abs)   = 0.9643
-Window    = 24
-Batch     = 64
 
 ---------------------------------------------------------------------------------------------
 
@@ -86,23 +74,6 @@ y_test_abs_lstm        : (1061,)
 forecast_abs_lstm_tb   : (8640,)
 
 
-LSTM Comparison Train vs Validation:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      2.1255e+21 |      1.8112e+22
-RMSE       |      4.6103e+10 |      1.3458e+11
-R²         |          0.1766 |         -0.8699
-Window    = 24
-Batch     = 64
-
-
-LSTM - Metrics in ABSOLUTE scale (reconstructed):
-Window    = 24
-Batch     = 64
-MSE(abs)  = 4.4101e+26
-RMSE(abs) = 2.1000e+13
-R²(abs)   = -8.1926
-
 ---------------------------------------------------------------------------------------------
 
 RELOAD EVERYTHING - GRU COMPLETED
@@ -144,21 +115,6 @@ y_test_abs_gru         : (1061,)
 forecast_tb_gru        : (8640,)
 
 
-GRU Train vs Validation Comparison:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      2.4900e+21 |      8.3929e+21
-RMSE       |      4.9900e+10 |      9.1613e+10
-R²         |          0.0354 |          0.1335
-Window    = 24
-Batch     = 64
-
-GRU - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 4.9153e+24
-RMSE(abs) = 2.2171e+12
-R²(abs)   = 0.8975
-Window    = 24
-Batch     = 64
 
 
 ---------------------------------------------------------------------------------------------
@@ -198,16 +154,6 @@ y_pred_test_seq_pint   : (1061, 24, 1)
 y_test_abs_pint        : (1061,)
 forecast_tb_pint       : (8640,)
 
-PINN Train vs Validation Comparison:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      2.6260e+21 |      7.1716e+21
-RMSE       |      5.1244e+10 |      8.4685e+10
-R²         |         -0.0172 |          0.2596
-Window    = 24
-Batch     = 64
-lambda    = 0.0010000000474974513
-omega     = 0.2617993950843811
 
 
 ---------------------------------------------------------------------------------------------
@@ -248,13 +194,6 @@ y_pred_tfkan_inv       : (1061,)
 y_test_abs_tfkan       : (1061,)
 forecast_abs_tfkan_tb  : (8640,)
 
-
-TFKAN - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 1.2475e+25
-RMSE(abs) = 3.5321e+12
-R²(abs)   = 0.7400
-Window    = 24
-Batch     = 64
 
 ---------------------------------------------------------------------------------------------
 RELOAD EVERYTHING - EXP COMPLETED
@@ -345,23 +284,29 @@ forecast_tb_prophet    : (8640,)
 
 ---------------------------------------------------------------------------------------------
 
-Mixture of Experts — Validação/Teste em TB
-MSE  : 7.541616 TB²
-RMSE : 2.746200 TB
-MAE  : 1.880274 TB
-R²   : 0.842799
+============================================================
+RELOAD EVERYTHING - MOE COMPLETED
+============================================================
+Base path              : /content/drive/MyDrive/Colab Notebooks/MESTRADO/RESULTADOS/0-TESE/360/08-abr-2026
+Model                  : moe
+Experts                : ['MLP', 'LSTM', 'GRU', 'PINT', 'TFKAN', 'EXP', 'ARIMA', 'PROPHET']
+N experts              : 8
+Forecast steps         : 8640
+Forecast days          : 360
+Time unit              : day
 
-📊 Ensembles simples para referência
-Média   -> RMSE=5.027007 TB | R²=0.473244
-Mediana -> RMSE=3.138704 TB | R²=0.794652
+📊 Metrics
+RMSE                   : 2.746200
+MAE                    : 1.880274
+R²                     : 0.842799
+Final forecast TB      : 8639.000
 
-🔮 Forecast futuro MoE carregado: 8640 pontos
-Valor final previsto: 810.673 TB
-✅ Pesos futuros carregados: (8640, 8)
-
-
-MOE final forecast value: 810.673 TB
-✅ MoE plots generated successfully after RELOAD.
+📐 Shapes
+y_test_abs_moe_tb      : (1061,)
+y_pred_abs_moe_tb      : (1061,)
+weights_validation     : (1061, 8)
+forecast_abs_moe_tb    : (8640,)
+weights_future         : (8640, 8)
 
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------

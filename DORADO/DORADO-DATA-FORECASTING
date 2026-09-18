@@ -31,21 +31,6 @@ y_pred_inv_mlp         : (104,)
 y_test_abs_mlp         : (104,)
 forecast_abs_mlp_tb    : (360,)
 
-✅ artifacts_mlp dictionary created.
-
- MLP Comparison Train vs Validation:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      5.8692e+06 |      9.2169e+06
-RMSE       |      2.4226e+03 |      3.0359e+03
-R²         |          0.4443 |          0.3949
-
-MLP - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 1.9371e+08
-RMSE(abs) = 1.3918e+04
-R²(abs)   = -0.8618
-Window    = 24
-Batch     = 64
 
 ---------------------------------------------------------------------------------------------
 
@@ -87,21 +72,6 @@ y_pred_inv_lstm        : (104,)
 y_test_abs_lstm        : (104,)
 forecast_abs_lstm_tb   : (360,)
 
-📊 LSTM Comparison Train vs Validation:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      8.8424e+06 |      1.2359e+07
-RMSE       |      2.9736e+03 |      3.5155e+03
-R²         |          0.1628 |          0.1886
-Window    = 24
-Batch     = 64
-
-LSTM - Metrics in ABSOLUTE scale (reconstructed):
-Window    = 24
-Batch     = 64
-MSE(abs)  = 2.5895e+09
-RMSE(abs) = 5.0887e+04
-R²(abs)   = -23.8874
 
 ---------------------------------------------------------------------------------------------
 RELOAD EVERYTHING - GRU COMPLETED
@@ -141,22 +111,6 @@ y_test_gru             : (104, 1)
 y_pred_inv_gru         : (104,)
 y_test_abs_gru         : (104,)
 forecast_tb_gru        : (360,)
-
-GRU Train vs Validation Comparison:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      6.0130e+06 |      1.1000e+07
-RMSE       |      2.4521e+03 |      3.3166e+03
-R²         |          0.4307 |          0.2779
-Window    = 24
-Batch     = 64
-
-GRU - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 1.3781e+08
-RMSE(abs) = 1.1739e+04
-R²(abs)   = -0.3245
-Window    = 24
-Batch     = 64
 
 
 ---------------------------------------------------------------------------------------------
@@ -199,38 +153,9 @@ y_pred_test_seq_pinn   : (104, 24, 1)
 y_test_abs_pinn        : (104,)
 forecast_tb_pinn       : (360,)
 
-📈 Available history keys:
-  - loss
-  - val_loss
-  - data_loss
-  - val_data_loss
-  - phys_loss
-  - val_phys_loss
-
-✅ artifacts_pinn dictionary created.
-✅ hist.history restored.
-
- PINN Train vs Validation Comparison:
-Metric     |           Train |      Validation
----------------------------------------------
-MSE        |      9.2043e+06 |      1.2626e+07
-RMSE       |      3.0339e+03 |      3.5533e+03
-R²         |          0.1286 |          0.1711
-Window    = 24
-Batch     = 64
-lambda    = 0.0010000000474974513
-omega     = 0.2617993950843811
 
 
 
-PINN - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 5.8778e+08
-RMSE(abs) = 2.4244e+04
-R²(abs)   = -4.6492
-Window    = 24
-Batch     = 64
-lambda    = 0.0010000000474974513
-omega     = 0.2617993950843811
 ---------------------------------------------------------------------------------------------
 
 RELOAD EVERYTHING - TFKAN COMPLETED
@@ -258,7 +183,7 @@ R² test diff           : 0.399273
 MSE abs                : 1.974921e+08
 RMSE abs               : 1.405319e+04
 R² abs                 : -0.898097
-Final forecast TB      : 0.000
+
 
 📐 Shapes
 X_train_tfkan          : (486, 24, 1)
@@ -269,19 +194,7 @@ y_pred_tfkan_inv       : (104,)
 y_test_abs_tfkan       : (104,)
 forecast_abs_tfkan_tb  : (360,)
 
-Comparação Treino vs Validação:
-Métrica    |          Treino |       Validação
----------------------------------------------
-MSE        |      5.3729e+06 |      9.1503e+06
-RMSE       |      2.3179e+03 |      3.0249e+03
-R²         |          0.4913 |          0.3993
 
-TFKAN - Metrics in ABSOLUTE scale (reconstructed):
-MSE(abs)  = 1.9749e+08
-RMSE(abs) = 1.4053e+04
-R²(abs)   = -0.8981
-Window    = 24
-Batch     = 64
 ---------------------------------------------------------------------------------------------
 
 RELOAD EVERYTHING -ETSCOMPLETED
@@ -311,108 +224,9 @@ y_test_abs_exp_tb      : (104,)
 forecast_tb_exp        : (360,)
 
 
-Exponential Smoothing — Espaço Normalizado / Diferenciado
-MSE  : 3.363438e-02
-RMSE : 1.833968e-01
-R²   : 0.002992
 
-Exponential Smoothing — Escala Absoluta (GB)
-MSE(abs)  : 1.522159e+08
-RMSE(abs) : 1.233758e+04
-R²(abs)   : -0.462948
-
-Exponential Smoothing — Escala Absoluta (TiB)
-MSE(TiB)  : 145.164431
-RMSE(TiB) : 12.048420
-R²(TiB)   : -0.462948
 
 ---------------------------------------------------------------------------------------------
-Train shape: (486,)
-Test shape : (104,)
-Series shape: (639,)
-
-🔎 Searching best ARIMA(p,0,q) by AIC...
-
-ARIMA(0, 0, 0) -> AIC=-440.9613 | BIC=-432.5930
-ARIMA(0, 0, 1) -> AIC=-485.4850 | BIC=-472.9388
-ARIMA(0, 0, 2) -> AIC=-493.2199 | BIC=-476.4999
-ARIMA(0, 0, 3) -> AIC=-502.1275 | BIC=-481.2378
-ARIMA(0, 0, 4) -> AIC=-526.8072 | BIC=-501.7520
-ARIMA(0, 0, 5) -> AIC=-558.6980 | BIC=-529.4815
-ARIMA(1, 0, 0) -> AIC=-488.9798 | BIC=-476.4273
-ARIMA(1, 0, 1) -> AIC=-487.1036 | BIC=-470.3752
-ARIMA(1, 0, 2) -> AIC=-501.9094 | BIC=-481.0093
-ARIMA(1, 0, 3) -> AIC=-530.6144 | BIC=-505.5468
-ARIMA(1, 0, 4) -> AIC=-542.7688 | BIC=-513.5377
-ARIMA(1, 0, 5) -> AIC=-561.4884 | BIC=-528.0981
-ARIMA(2, 0, 0) -> AIC=-491.3199 | BIC=-474.5915
-ARIMA(2, 0, 1) -> AIC=-540.3722 | BIC=-519.4618
-ARIMA(2, 0, 2) -> AIC=-636.2133 | BIC=-611.1332
-ARIMA(2, 0, 3) -> AIC=-632.6951 | BIC=-603.4495
-ARIMA(2, 0, 4) -> AIC=-639.6172 | BIC=-606.2102
-ARIMA(2, 0, 5) -> AIC=-637.0104 | BIC=-599.4464
-ARIMA(3, 0, 0) -> AIC=-541.9144 | BIC=-521.0143
-ARIMA(3, 0, 1) -> AIC=-567.0629 | BIC=-541.9828
-ARIMA(3, 0, 2) -> AIC=-634.7908 | BIC=-605.5306
-ARIMA(3, 0, 3) -> AIC=-632.3235 | BIC=-598.9000
-ARIMA(3, 0, 4) -> AIC=-628.3605 | BIC=-590.7777
-ARIMA(3, 0, 5) -> AIC=-636.2086 | BIC=-594.4707
-ARIMA(4, 0, 0) -> AIC=-576.4945 | BIC=-551.4269
-ARIMA(4, 0, 1) -> AIC=-576.3615 | BIC=-547.1159
-ARIMA(4, 0, 2) -> AIC=-630.8736 | BIC=-597.4500
-ARIMA(4, 0, 3) -> AIC=-630.5887 | BIC=-592.9872
-ARIMA(4, 0, 4) -> AIC=-626.7989 | BIC=-585.0402
-ARIMA(4, 0, 5) -> AIC=-623.4167 | BIC=-577.5051
-ARIMA(5, 0, 0) -> AIC=-576.5885 | BIC=-547.3574
-ARIMA(5, 0, 1) -> AIC=-576.4287 | BIC=-543.0218
-ARIMA(5, 0, 2) -> AIC=-627.4093 | BIC=-589.8265
-ARIMA(5, 0, 3) -> AIC=-626.4090 | BIC=-584.6504
-ARIMA(5, 0, 4) -> AIC=-626.9656 | BIC=-581.0310
-ARIMA(5, 0, 5) -> AIC=-627.9489 | BIC=-577.8634
-
-✅ Best model found:
-ARIMA(2, 0, 4) | AIC=-639.6172 | BIC=-606.2102
-
-📊 Best ARIMA(2, 0, 4) — Espaço normalizado/diferenciado
-MSE  : 6.105682e-02
-RMSE : 2.470968e-01
-R²   : -0.809878
-
-
- Best ARIMA(2, 0, 4) — Escala absoluta
-MSE(abs)  : 3.226388e+08
-RMSE(abs) : 1.796215e+04
-R²(abs)   : -2.100882
-
-📊 Best ARIMA(2, 0, 4) — Escala absoluta em TB
-MSE(TB²) : 322.638809
-RMSE(TB): 17.962149
-R²(TB)  : -2.100882
-
-Best ARIMA(2, 0, 4) - Future forecast:
-Step 001: 377.950 TB
-Step 002: 381.041 TB
-Step 003: 386.016 TB
-Step 004: 389.143 TB
-Step 005: 388.246 TB
-Step 006: 384.240 TB
-Step 007: 380.325 TB
-Step 008: 379.509 TB
-Step 009: 382.369 TB
-Step 010: 386.710 TB
-Step 011: 389.319 TB
-Step 012: 388.402 TB
-Step 013: 384.868 TB
-Step 014: 381.547 TB
-Step 015: 380.998 TB
-Step 016: 383.610 TB
-Step 017: 387.395 TB
-Step 018: 389.566 TB
-Step 019: 388.652 TB
-Step 020: 385.543 TB
-...
-
-🔮 Final forecast value (360 days ahead): 425.353 TB
 
 
 RELOAD EVERYTHING - ARIMA COMPLETED
@@ -437,7 +251,7 @@ R² norm                : -0.806368
 MSE abs                : 3.107613e+08
 RMSE abs               : 1.762842e+04
 R² abs                 : -1.986727
-Final forecast TB      : 0.000
+
 
 📐 Shapes
 y_train                : (486,)
@@ -448,60 +262,6 @@ forecast_tb_arima      : (360,)
 search_results         : 36 models
 
 ---------------------------------------------------------------------------------------------
-Prophet dataframe:
-          ds           y
-0 2024-09-14  293.003737
-1 2024-09-15  290.466626
-2 2024-09-16  290.101180
-3 2024-09-17  292.148007
-4 2024-09-18  295.352363
-            ds           y
-634 2026-06-10  372.035995
-635 2026-06-11  375.046268
-636 2026-06-12  375.482807
-637 2026-06-13  366.643055
-638 2026-06-14  361.622668
-Y TiB min/max: 290.05461179651354 387.8694948018532
-
-Train Prophet: (511, 2)
-Test Prophet : (128, 2)
-Train y TiB: 290.05461179651354 383.21670449059485
-Test  y TiB: 334.7236767155123 387.8694948018532
-
-===== PROPHET - TESTE ABSOLUTO =====
-MSE  (TiB²): 142.184337
-RMSE (TiB) : 11.924107
-R²         : -0.038031
-
-===== PROPHET - FORECAST FUTURO =====
-Primeiro valor previsto (TiB): 359.458
-Último valor previsto   (TiB): 357.761
-
-
-Prophet - Forecast (TiB):
-Step 001: 359.458 TiB
-Step 002: 359.152 TiB
-Step 003: 359.116 TiB
-Step 004: 359.257 TiB
-Step 005: 359.307 TiB
-Step 006: 359.055 TiB
-Step 007: 358.555 TiB
-Step 008: 358.097 TiB
-Step 009: 357.959 TiB
-Step 010: 358.159 TiB
-Step 011: 358.459 TiB
-Step 012: 358.612 TiB
-Step 013: 358.628 TiB
-Step 014: 358.789 TiB
-Step 015: 359.378 TiB
-Step 016: 360.368 TiB
-Step 017: 361.364 TiB
-Step 018: 361.872 TiB
-Step 019: 361.687 TiB
-Step 020: 361.048 TiB
-...
-
-🔮 Final forecast value (360 days ahead): 357.761 TiB
 
 
 
@@ -534,297 +294,6 @@ y_pred_abs_prophet     : (128,)
 forecast_tb_prophet    : (360,)
 
 ---------------------------------------------------------------------------------------------
-
-Especialistas usados no MoE: ['MLP', 'LSTM', 'GRU', 'PINN', 'TFKAN', 'ETS', 'ARIMA', 'PROPHET']
-Matriz de validação: (104, 8)
-Alvo real: (104,)
-
-=== DEBUG UNIDADE — VALIDAÇÃO ===
-y_val_moe_tb min/max: 351.4510166587832 397.17836267709765
-MLP      min/max: 350.089014242172 374.0965623359678
-LSTM     min/max: 290.53927893447855 368.098597476959
-GRU      min/max: 352.61785096931436 382.8302049140928
-PINN     min/max: 337.0545529823301 363.542014072418
-TFKAN    min/max: 351.0664472084043 379.39614767837503
-ETS      min/max: 351.7877027166584 369.3324064193669
-ARIMA    min/max: 345.698620556981 367.1103937810972
-PROPHET  min/max: 373.2078217210898 382.435151903556
-Epoch 1/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 3s 246ms/step - loss: 180.4336 - mae: 9.6860 - val_loss: 789.5597 - val_mae: 27.7550 - learning_rate: 0.0010
-Epoch 2/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 109ms/step - loss: 174.1453 - mae: 9.5605 - val_loss: 748.5179 - val_mae: 27.0014 - learning_rate: 0.0010
-Epoch 3/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 106ms/step - loss: 164.7773 - mae: 9.3280 - val_loss: 708.6723 - val_mae: 26.2479 - learning_rate: 0.0010
-Epoch 4/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 88ms/step - loss: 155.0747 - mae: 9.0719 - val_loss: 670.1995 - val_mae: 25.5020 - learning_rate: 0.0010
-Epoch 5/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 127ms/step - loss: 151.0882 - mae: 8.9298 - val_loss: 633.1345 - val_mae: 24.7645 - learning_rate: 0.0010
-Epoch 6/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 95ms/step - loss: 142.1755 - mae: 8.6847 - val_loss: 597.4120 - val_mae: 24.0346 - learning_rate: 0.0010
-Epoch 7/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 65ms/step - loss: 136.4953 - mae: 8.4768 - val_loss: 562.8119 - val_mae: 23.3059 - learning_rate: 0.0010
-Epoch 8/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 131.3222 - mae: 8.3130 - val_loss: 530.8362 - val_mae: 22.6121 - learning_rate: 0.0010
-Epoch 9/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 122.1617 - mae: 8.0432 - val_loss: 500.7095 - val_mae: 21.9385 - learning_rate: 0.0010
-Epoch 10/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 78ms/step - loss: 117.1579 - mae: 7.9112 - val_loss: 473.5370 - val_mae: 21.3126 - learning_rate: 0.0010
-Epoch 11/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 117.9648 - mae: 7.8816 - val_loss: 447.3583 - val_mae: 20.6925 - learning_rate: 0.0010
-Epoch 12/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 106.7158 - mae: 7.5056 - val_loss: 422.4980 - val_mae: 20.0866 - learning_rate: 0.0010
-Epoch 13/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 99.0642 - mae: 7.3087 - val_loss: 399.2580 - val_mae: 19.5061 - learning_rate: 0.0010
-Epoch 14/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 95.6887 - mae: 7.0358 - val_loss: 377.3772 - val_mae: 18.9424 - learning_rate: 0.0010
-Epoch 15/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 87.6597 - mae: 6.8355 - val_loss: 356.0850 - val_mae: 18.3775 - learning_rate: 0.0010
-Epoch 16/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 78.3978 - mae: 6.4568 - val_loss: 332.7133 - val_mae: 17.7374 - learning_rate: 0.0010
-Epoch 17/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step - loss: 69.9407 - mae: 6.0538 - val_loss: 301.8250 - val_mae: 16.8218 - learning_rate: 0.0010
-Epoch 18/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 70.7954 - mae: 6.0246 - val_loss: 262.2226 - val_mae: 15.5534 - learning_rate: 0.0010
-Epoch 19/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 70.6986 - mae: 6.0414 - val_loss: 221.5664 - val_mae: 14.1471 - learning_rate: 0.0010
-Epoch 20/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 54.1145 - mae: 5.1991 - val_loss: 183.7923 - val_mae: 12.7025 - learning_rate: 0.0010
-Epoch 21/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 54.5971 - mae: 5.1978 - val_loss: 150.6258 - val_mae: 11.2688 - learning_rate: 0.0010
-Epoch 22/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 52.0466 - mae: 5.0540 - val_loss: 121.9112 - val_mae: 9.8724 - learning_rate: 0.0010
-Epoch 23/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 80ms/step - loss: 42.6404 - mae: 4.5624 - val_loss: 98.0750 - val_mae: 8.7040 - learning_rate: 0.0010
-Epoch 24/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 39.2675 - mae: 4.3467 - val_loss: 78.7720 - val_mae: 7.7273 - learning_rate: 0.0010
-Epoch 25/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 38.1387 - mae: 4.1165 - val_loss: 63.9640 - val_mae: 6.8893 - learning_rate: 0.0010
-Epoch 26/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 38.3999 - mae: 4.1642 - val_loss: 53.0061 - val_mae: 6.1559 - learning_rate: 0.0010
-Epoch 27/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 33.9333 - mae: 3.8889 - val_loss: 45.4040 - val_mae: 5.6705 - learning_rate: 0.0010
-Epoch 28/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 32.5035 - mae: 3.7645 - val_loss: 40.4252 - val_mae: 5.3822 - learning_rate: 0.0010
-Epoch 29/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 58ms/step - loss: 32.5143 - mae: 3.8377 - val_loss: 37.4749 - val_mae: 5.2716 - learning_rate: 0.0010
-Epoch 30/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 31.3079 - mae: 3.8465 - val_loss: 36.0430 - val_mae: 5.2212 - learning_rate: 0.0010
-Epoch 31/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 29.2217 - mae: 3.6360 - val_loss: 35.6514 - val_mae: 5.2030 - learning_rate: 0.0010
-Epoch 32/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 27.6644 - mae: 3.5681 - val_loss: 35.8102 - val_mae: 5.2083 - learning_rate: 0.0010
-Epoch 33/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 27.7364 - mae: 3.5030 - val_loss: 36.2937 - val_mae: 5.2113 - learning_rate: 0.0010
-Epoch 34/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 27.6596 - mae: 3.6786 - val_loss: 36.8791 - val_mae: 5.2092 - learning_rate: 0.0010
-Epoch 35/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 26.6392 - mae: 3.5907 - val_loss: 37.2337 - val_mae: 5.2000 - learning_rate: 0.0010
-Epoch 36/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step - loss: 25.5546 - mae: 3.4929 - val_loss: 37.1900 - val_mae: 5.1841 - learning_rate: 0.0010
-Epoch 37/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 26.1390 - mae: 3.5500 - val_loss: 37.0131 - val_mae: 5.1662 - learning_rate: 0.0010
-Epoch 38/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 24.9249 - mae: 3.6509 - val_loss: 36.7842 - val_mae: 5.1487 - learning_rate: 0.0010
-Epoch 39/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 24.2570 - mae: 3.3768 - val_loss: 36.4283 - val_mae: 5.1302 - learning_rate: 0.0010
-Epoch 40/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 23.7289 - mae: 3.4755 - val_loss: 36.0634 - val_mae: 5.1091 - learning_rate: 0.0010
-Epoch 41/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 22.3131 - mae: 3.3146 - val_loss: 35.5400 - val_mae: 5.0845 - learning_rate: 0.0010
-Epoch 42/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 24.3020 - mae: 3.4561 - val_loss: 34.7201 - val_mae: 5.0521 - learning_rate: 0.0010
-Epoch 43/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 23.1462 - mae: 3.3422 - val_loss: 33.7875 - val_mae: 5.0119 - learning_rate: 0.0010
-Epoch 44/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 66ms/step - loss: 24.2554 - mae: 3.5426 - val_loss: 33.0515 - val_mae: 4.9740 - learning_rate: 0.0010
-Epoch 45/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 23.0099 - mae: 3.4347 - val_loss: 32.5644 - val_mae: 4.9443 - learning_rate: 0.0010
-Epoch 46/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 21.3001 - mae: 3.3204 - val_loss: 32.0698 - val_mae: 4.9129 - learning_rate: 0.0010
-Epoch 47/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 21.8278 - mae: 3.3014 - val_loss: 31.4685 - val_mae: 4.8762 - learning_rate: 0.0010
-Epoch 48/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 57ms/step - loss: 20.5326 - mae: 3.1941 - val_loss: 30.5879 - val_mae: 4.8254 - learning_rate: 0.0010
-Epoch 49/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 21.7525 - mae: 3.3385 - val_loss: 29.5009 - val_mae: 4.7551 - learning_rate: 0.0010
-Epoch 50/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step - loss: 21.6850 - mae: 3.3628 - val_loss: 28.3691 - val_mae: 4.6598 - learning_rate: 0.0010
-Epoch 51/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 22.1221 - mae: 3.3713 - val_loss: 27.5155 - val_mae: 4.5423 - learning_rate: 0.0010
-Epoch 52/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 58ms/step - loss: 20.3086 - mae: 3.2617 - val_loss: 27.2207 - val_mae: 4.5183 - learning_rate: 0.0010
-Epoch 53/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 21.5669 - mae: 3.3279 - val_loss: 27.9037 - val_mae: 4.5529 - learning_rate: 0.0010
-Epoch 54/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 21.5774 - mae: 3.3130 - val_loss: 28.5712 - val_mae: 4.6018 - learning_rate: 0.0010
-Epoch 55/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 20.0351 - mae: 3.2116 - val_loss: 28.6839 - val_mae: 4.6212 - learning_rate: 0.0010
-Epoch 56/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 20.1856 - mae: 3.2383 - val_loss: 28.5889 - val_mae: 4.6217 - learning_rate: 0.0010
-Epoch 57/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 20.4483 - mae: 3.2162 - val_loss: 28.7272 - val_mae: 4.6426 - learning_rate: 0.0010
-Epoch 58/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 21.3476 - mae: 3.2931 - val_loss: 28.4324 - val_mae: 4.6280 - learning_rate: 0.0010
-Epoch 59/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 20.0249 - mae: 3.2323 - val_loss: 28.0485 - val_mae: 4.6065 - learning_rate: 0.0010
-Epoch 60/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 19.7295 - mae: 3.1834 - val_loss: 27.5143 - val_mae: 4.5746 - learning_rate: 0.0010
-Epoch 61/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 19.7685 - mae: 3.1803 - val_loss: 27.6880 - val_mae: 4.6113 - learning_rate: 0.0010
-Epoch 62/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 20.2500 - mae: 3.2421 - val_loss: 28.1231 - val_mae: 4.6661 - learning_rate: 0.0010
-Epoch 63/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 19.9799 - mae: 3.2160 - val_loss: 28.4774 - val_mae: 4.7009 - learning_rate: 0.0010
-Epoch 64/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 19.9874 - mae: 3.2044 - val_loss: 29.5699 - val_mae: 4.7773 - learning_rate: 0.0010
-Epoch 65/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 19.4336 - mae: 3.1436 - val_loss: 31.0062 - val_mae: 4.8731 - learning_rate: 0.0010
-Epoch 66/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 19.8628 - mae: 3.1230 - val_loss: 32.8078 - val_mae: 5.0083 - learning_rate: 0.0010
-Epoch 67/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 51ms/step - loss: 18.2758 - mae: 3.0569 - val_loss: 34.6442 - val_mae: 5.1242 - learning_rate: 0.0010
-Epoch 68/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 18.9646 - mae: 3.0726 - val_loss: 34.9754 - val_mae: 5.1436 - learning_rate: 0.0010
-Epoch 69/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 19.2033 - mae: 3.1063 - val_loss: 34.3293 - val_mae: 5.1066 - learning_rate: 0.0010
-Epoch 70/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 18.7892 - mae: 3.1468 - val_loss: 33.4041 - val_mae: 5.0491 - learning_rate: 0.0010
-Epoch 71/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 18.6185 - mae: 3.0478 - val_loss: 32.9222 - val_mae: 5.0187 - learning_rate: 0.0010
-Epoch 72/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 19.9497 - mae: 3.1870 - val_loss: 32.9613 - val_mae: 5.0248 - learning_rate: 0.0010
-Epoch 73/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 18.1334 - mae: 3.0085 - val_loss: 32.3107 - val_mae: 4.9860 - learning_rate: 0.0010
-Epoch 74/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 18.9598 - mae: 3.0533 - val_loss: 30.6909 - val_mae: 4.8653 - learning_rate: 0.0010
-Epoch 75/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 18.1030 - mae: 2.9616 - val_loss: 29.1364 - val_mae: 4.7504 - learning_rate: 0.0010
-Epoch 76/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 19.0670 - mae: 3.1263 - val_loss: 28.3699 - val_mae: 4.6974 - learning_rate: 0.0010
-Epoch 77/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 68ms/step - loss: 18.3535 - mae: 2.9600 - val_loss: 28.1755 - val_mae: 4.6748 - learning_rate: 0.0010
-Epoch 78/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 62ms/step - loss: 18.0836 - mae: 3.0215 - val_loss: 28.1272 - val_mae: 4.6630 - learning_rate: 0.0010
-Epoch 79/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step - loss: 19.1819 - mae: 3.1089 - val_loss: 29.0783 - val_mae: 4.7283 - learning_rate: 0.0010
-Epoch 80/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 67ms/step - loss: 17.5557 - mae: 2.9540 - val_loss: 30.5470 - val_mae: 4.8683 - learning_rate: 0.0010
-Epoch 81/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 18.3979 - mae: 3.0107 - val_loss: 32.1337 - val_mae: 4.9843 - learning_rate: 0.0010
-Epoch 82/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 63ms/step - loss: 18.6872 - mae: 3.1401 - val_loss: 33.1357 - val_mae: 5.0606 - learning_rate: 0.0010
-Epoch 83/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 64ms/step - loss: 18.5057 - mae: 2.9887 - val_loss: 33.6417 - val_mae: 5.1076 - learning_rate: 5.0000e-04
-Epoch 84/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 18.6193 - mae: 3.0599 - val_loss: 34.7545 - val_mae: 5.1960 - learning_rate: 5.0000e-04
-Epoch 85/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 59ms/step - loss: 19.1653 - mae: 3.0847 - val_loss: 35.4289 - val_mae: 5.2447 - learning_rate: 5.0000e-04
-Epoch 86/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 72ms/step - loss: 18.3962 - mae: 3.0735 - val_loss: 35.5799 - val_mae: 5.2565 - learning_rate: 5.0000e-04
-Epoch 87/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 71ms/step - loss: 18.9448 - mae: 3.1202 - val_loss: 35.2542 - val_mae: 5.2283 - learning_rate: 5.0000e-04
-Epoch 88/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 17.8048 - mae: 2.9584 - val_loss: 34.6787 - val_mae: 5.1893 - learning_rate: 5.0000e-04
-Epoch 89/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 77ms/step - loss: 18.3107 - mae: 3.0394 - val_loss: 33.8257 - val_mae: 5.1299 - learning_rate: 5.0000e-04
-Epoch 90/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 18.2544 - mae: 2.9410 - val_loss: 33.2199 - val_mae: 5.0838 - learning_rate: 5.0000e-04
-Epoch 91/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 60ms/step - loss: 17.5594 - mae: 2.9801 - val_loss: 33.1897 - val_mae: 5.0821 - learning_rate: 5.0000e-04
-Epoch 92/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 76ms/step - loss: 17.0352 - mae: 2.8476 - val_loss: 32.9430 - val_mae: 5.0619 - learning_rate: 5.0000e-04
-Epoch 93/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 81ms/step - loss: 17.8461 - mae: 2.9781 - val_loss: 32.6095 - val_mae: 5.0333 - learning_rate: 5.0000e-04
-Epoch 94/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 76ms/step - loss: 17.3693 - mae: 2.9066 - val_loss: 32.1923 - val_mae: 4.9935 - learning_rate: 5.0000e-04
-Epoch 95/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 69ms/step - loss: 18.2360 - mae: 2.9139 - val_loss: 32.1734 - val_mae: 4.9917 - learning_rate: 5.0000e-04
-Epoch 96/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 79ms/step - loss: 17.7084 - mae: 2.9089 - val_loss: 32.3523 - val_mae: 5.0093 - learning_rate: 5.0000e-04
-Epoch 97/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 76ms/step - loss: 18.0293 - mae: 3.0219 - val_loss: 32.3344 - val_mae: 5.0077 - learning_rate: 5.0000e-04
-Epoch 98/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.5211 - mae: 2.9192 - val_loss: 32.4185 - val_mae: 5.0144 - learning_rate: 5.0000e-04
-Epoch 99/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.5038 - mae: 2.9373 - val_loss: 32.1900 - val_mae: 4.9923 - learning_rate: 5.0000e-04
-Epoch 100/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 16.9397 - mae: 2.8724 - val_loss: 31.9290 - val_mae: 4.9653 - learning_rate: 5.0000e-04
-Epoch 101/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 18.6355 - mae: 3.0623 - val_loss: 31.9214 - val_mae: 4.9583 - learning_rate: 5.0000e-04
-Epoch 102/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 17.3750 - mae: 2.9000 - val_loss: 32.4936 - val_mae: 4.9962 - learning_rate: 5.0000e-04
-Epoch 103/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.0170 - mae: 2.9340 - val_loss: 33.2735 - val_mae: 5.0460 - learning_rate: 5.0000e-04
-Epoch 104/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 61ms/step - loss: 16.7728 - mae: 2.9197 - val_loss: 33.7305 - val_mae: 5.0701 - learning_rate: 5.0000e-04
-Epoch 105/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.3314 - mae: 2.9365 - val_loss: 34.1964 - val_mae: 5.0916 - learning_rate: 5.0000e-04
-Epoch 106/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.6787 - mae: 2.9456 - val_loss: 34.3779 - val_mae: 5.0957 - learning_rate: 5.0000e-04
-Epoch 107/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 46ms/step - loss: 18.1835 - mae: 3.0001 - val_loss: 34.1621 - val_mae: 5.0712 - learning_rate: 5.0000e-04
-Epoch 108/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 16.6408 - mae: 2.7729 - val_loss: 33.8108 - val_mae: 5.0447 - learning_rate: 5.0000e-04
-Epoch 109/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 17.8769 - mae: 2.9620 - val_loss: 33.2410 - val_mae: 5.0159 - learning_rate: 5.0000e-04
-Epoch 110/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 17.7421 - mae: 2.9641 - val_loss: 32.5666 - val_mae: 4.9775 - learning_rate: 5.0000e-04
-Epoch 111/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.1877 - mae: 2.8544 - val_loss: 31.7627 - val_mae: 4.9269 - learning_rate: 5.0000e-04
-Epoch 112/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.5606 - mae: 2.8909 - val_loss: 31.0422 - val_mae: 4.8787 - learning_rate: 5.0000e-04
-Epoch 113/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.5118 - mae: 2.9594 - val_loss: 30.7805 - val_mae: 4.8603 - learning_rate: 2.5000e-04
-Epoch 114/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 18.1451 - mae: 3.0068 - val_loss: 30.5723 - val_mae: 4.8455 - learning_rate: 2.5000e-04
-Epoch 115/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 16.8454 - mae: 2.8081 - val_loss: 30.4942 - val_mae: 4.8392 - learning_rate: 2.5000e-04
-Epoch 116/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 16.9577 - mae: 2.9114 - val_loss: 30.6132 - val_mae: 4.8477 - learning_rate: 2.5000e-04
-Epoch 117/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 17.2266 - mae: 2.8807 - val_loss: 30.5773 - val_mae: 4.8452 - learning_rate: 2.5000e-04
-Epoch 118/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 16.9697 - mae: 2.8317 - val_loss: 30.5068 - val_mae: 4.8402 - learning_rate: 2.5000e-04
-Epoch 119/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 16.4686 - mae: 2.7818 - val_loss: 30.4259 - val_mae: 4.8344 - learning_rate: 2.5000e-04
-Epoch 120/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.0256 - mae: 2.8628 - val_loss: 30.3614 - val_mae: 4.8295 - learning_rate: 2.5000e-04
-Epoch 121/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 50ms/step - loss: 17.1763 - mae: 2.9030 - val_loss: 30.4242 - val_mae: 4.8338 - learning_rate: 2.5000e-04
-Epoch 122/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 42ms/step - loss: 17.3431 - mae: 2.9587 - val_loss: 30.4057 - val_mae: 4.8320 - learning_rate: 2.5000e-04
-Epoch 123/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 16.8876 - mae: 2.8714 - val_loss: 30.4064 - val_mae: 4.8316 - learning_rate: 2.5000e-04
-Epoch 124/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 43ms/step - loss: 17.4389 - mae: 2.9799 - val_loss: 30.5693 - val_mae: 4.8422 - learning_rate: 2.5000e-04
-Epoch 125/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 40ms/step - loss: 18.4895 - mae: 3.0045 - val_loss: 30.7814 - val_mae: 4.8546 - learning_rate: 2.5000e-04
-Epoch 126/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.1934 - mae: 2.8741 - val_loss: 30.8411 - val_mae: 4.8557 - learning_rate: 2.5000e-04
-Epoch 127/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 16.6512 - mae: 2.8471 - val_loss: 30.8592 - val_mae: 4.8540 - learning_rate: 2.5000e-04
-Epoch 128/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.3685 - mae: 2.8792 - val_loss: 30.9542 - val_mae: 4.8593 - learning_rate: 2.5000e-04
-Epoch 129/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.2491 - mae: 2.7565 - val_loss: 31.1137 - val_mae: 4.8689 - learning_rate: 2.5000e-04
-Epoch 130/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 45ms/step - loss: 16.9427 - mae: 2.8781 - val_loss: 31.1483 - val_mae: 4.8702 - learning_rate: 2.5000e-04
-Epoch 131/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 17.2052 - mae: 2.8506 - val_loss: 31.0830 - val_mae: 4.8649 - learning_rate: 2.5000e-04
-Epoch 132/200
-3/3 ━━━━━━━━━━━━━━━━━━━━ 0s 41ms/step - loss: 16.7230 - mae: 2.8169 - val_loss: 31.0105 - val_mae: 4.8596 - learning_rate: 2.5000e-04
-WARNING:tensorflow:5 out of the last 29 calls to <function TensorFlowTrainer.make_predict_function.<locals>.one_step_on_data_distributed at 0x7871f13e2520> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has reduce_retracing=True option that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
-
-📊 Mixture of Experts — Validação/Teste em TiB
-MSE  : 21.896086 TiB²
-RMSE : 4.679325 TiB
-MAE  : 3.533965 TiB
-R²   : 0.779334
-
-📊 Ensembles simples para referência
-Média   -> RMSE=16.171289 TiB | R²=-1.635469
-Mediana -> RMSE=13.301162 TiB | R²=-0.782985
-
 
 
 RELOAD EVERYTHING - MOE COMPLETED
