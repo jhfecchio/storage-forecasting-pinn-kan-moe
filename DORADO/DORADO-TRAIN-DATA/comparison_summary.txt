@@ -1,0 +1,22 @@
+MODEL COMPARISON SUMMARY
+============================================================
+Unit: TiB
+Scale: Absolute reconstructed scale
+Number of points: 128
+Models included: MLP, LSTM, GRU, PINN, TFKAN, ETS, PROPHET, MOE
+
+Actual series:
+  Length: 128
+  Min TiB: 334.723677
+  Max TiB: 387.869495
+  Mean TiB: 359.797318
+
+Model series:
+  MLP: len=128, min=350.089014, max=374.096562, mean=363.156535, std=6.704795
+  LSTM: len=128, min=290.539279, max=368.098597, mean=334.301106, std=25.192399
+  GRU: len=128, min=352.617851, max=382.830205, mean=366.974629, std=6.916460
+  PINN: len=128, min=337.054553, max=363.542014, mean=353.070933, std=5.828425
+  TFKAN: len=128, min=351.066447, max=379.396148, mean=364.408351, std=6.795046
+  ETS: len=128, min=351.787703, max=369.332406, mean=360.560055, std=5.113655
+  PROPHET: len=128, min=358.267483, max=363.024488, mean=360.553161, std=1.152388
+  MOE: len=128, min=351.669281, max=382.185944, mean=371.827538, std=8.554525

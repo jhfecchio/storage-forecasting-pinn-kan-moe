@@ -1,0 +1,98 @@
+{
+    "models": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINN",
+        "TFKAN",
+        "ETS",
+        "PROPHET",
+        "MOE"
+    ],
+    "real_min_tib": 334.7236767155123,
+    "real_max_tib": 387.8694948018532,
+    "real_mean_tib": 359.797318155408,
+    "real_std_tib": 11.70363320297331,
+    "series_files": [
+        "distribution_series_tib.csv",
+        "analise_distribuicoes_series_tib.csv"
+    ],
+    "metrics_files": [
+        "metrics_models_tib.csv",
+        "metricas_modelos_tib.csv"
+    ],
+    "ks_files": [
+        "ks_table_tib.csv",
+        "tabela_ks_tib.csv"
+    ],
+    "acf_files": [
+        "acf_models_tib.csv",
+        "acf_modelos_tib.csv"
+    ],
+    "figure_files": [
+        "pdf_models_tib.png",
+        "pdf_modelos_tib.png",
+        "cdf_models_tib.png",
+        "cdf_modelos_tib.png",
+        "acf_models_tib.png",
+        "acf_modelos_tib.png"
+    ],
+    "model_summary": {
+        "MLP": {
+            "min_tib": 350.089014242172,
+            "max_tib": 374.0965623359678,
+            "mean_tib": 363.15653535922655,
+            "std_tib": 6.7047946484589405,
+            "n_points": 104
+        },
+        "LSTM": {
+            "min_tib": 290.53927893447855,
+            "max_tib": 368.098597476959,
+            "mean_tib": 334.30110633257016,
+            "std_tib": 25.192398913571328,
+            "n_points": 104
+        },
+        "GRU": {
+            "min_tib": 352.6178509693144,
+            "max_tib": 382.8302049140928,
+            "mean_tib": 366.97462882415135,
+            "std_tib": 6.91646028630448,
+            "n_points": 104
+        },
+        "PINN": {
+            "min_tib": 337.0545529823301,
+            "max_tib": 363.542014072418,
+            "mean_tib": 353.0709329559664,
+            "std_tib": 5.828425342973013,
+            "n_points": 104
+        },
+        "TFKAN": {
+            "min_tib": 351.0664472084043,
+            "max_tib": 379.39614767837503,
+            "mean_tib": 364.4083512250458,
+            "std_tib": 6.795046174178411,
+            "n_points": 104
+        },
+        "ETS": {
+            "min_tib": 351.7877027166584,
+            "max_tib": 369.3324064193669,
+            "mean_tib": 360.5600545680127,
+            "std_tib": 5.1136553292716105,
+            "n_points": 104
+        },
+        "PROPHET": {
+            "min_tib": 358.26748287722233,
+            "max_tib": 363.024488314876,
+            "mean_tib": 360.5531606330028,
+            "std_tib": 1.1523881192565155,
+            "n_points": 128
+        },
+        "MOE": {
+            "min_tib": 351.6692810058594,
+            "max_tib": 382.1859436035156,
+            "mean_tib": 371.8275375366211,
+            "std_tib": 8.554524806617998,
+            "n_points": 104
+        }
+    }
+}

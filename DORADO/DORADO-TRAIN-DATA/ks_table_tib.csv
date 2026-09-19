@@ -1,0 +1,9 @@
+Model,KS_statistic,p_value,Interpretation
+MLP,0.375,6.67325602153494e-07,Different distributions (p < 0.05)
+LSTM,0.4230769230769231,9.973114183057752e-09,Different distributions (p < 0.05)
+GRU,0.4423076923076923,1.5796341927527716e-09,Different distributions (p < 0.05)
+PINN,0.38461538461538464,3.0122336208317436e-07,Different distributions (p < 0.05)
+TFKAN,0.3942307692307692,1.329537598160218e-07,Different distributions (p < 0.05)
+ETS,0.375,6.67325602153494e-07,Different distributions (p < 0.05)
+PROPHET,0.484375,5.643989008289463e-14,Different distributions (p < 0.05)
+MOE,0.5096153846153846,1.1659889344499857e-12,Different distributions (p < 0.05)

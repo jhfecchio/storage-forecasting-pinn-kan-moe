@@ -1,0 +1,32 @@
+{
+    "n_comp": 1061,
+    "reference_model": "ARIMA",
+    "available_models": [
+        "ARIMA",
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINT",
+        "TFKAN",
+        "EXP",
+        "PROPHET",
+        "MOE"
+    ],
+    "columns": [
+        "time_index",
+        "Actual_TB",
+        "ARIMA_TB",
+        "MLP_TB",
+        "LSTM_TB",
+        "GRU_TB",
+        "PINT_TB",
+        "TFKAN_TB",
+        "EXP_TB",
+        "PROPHET_TB",
+        "MOE_TB"
+    ],
+    "pt_figure": "all_model_comparison_pt.png",
+    "en_figure": "all_model_comparison_en.png",
+    "csv_en": "all_model_comparison.csv",
+    "csv_pt": "all_comparacao_modelos.csv"
+}

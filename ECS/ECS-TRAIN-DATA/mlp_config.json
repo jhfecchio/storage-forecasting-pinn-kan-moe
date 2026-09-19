@@ -1,0 +1,10 @@
+{
+    "window": 24,
+    "epochs": 200,
+    "batch_size": 64,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "time_unit": "hour",
+    "train_size": 4339,
+    "architecture": "Input(window,1) -> Flatten -> Dense(128,relu) -> Dense(64,relu) -> Dense(1,linear)"
+}

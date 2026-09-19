@@ -1,0 +1,29 @@
+{
+    "model_type": "ModelComparison",
+    "models_included": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINN",
+        "TFKAN",
+        "ETS",
+        "PROPHET",
+        "MOE"
+    ],
+    "n_points": 128,
+    "unit": "TiB",
+    "scale": "absolute",
+    "description": "Comparison of reconstructed absolute-scale forecasts across models.",
+    "csv_files": [
+        "all_model_comparison.csv",
+        "all_comparacao_modelos.csv"
+    ],
+    "figure_files": [
+        "all_model_comparison_en.png",
+        "all_model_comparison_pt.png"
+    ],
+    "numpy_files": [
+        "comparison_actual_tib.npy",
+        "comparison_dataframe.npy"
+    ]
+}

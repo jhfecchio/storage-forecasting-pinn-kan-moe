@@ -1,0 +1,26 @@
+{
+    "MSE_TB2": 27.303216525930004,
+    "RMSE_TB": 5.225247987027028,
+    "MAE_TB": 3.8002174483904265,
+    "R2": 0.7248418738710245,
+    "MSE_MEAN_TB2": 261.51082500031265,
+    "RMSE_MEAN_TB": 16.171296330236256,
+    "R2_MEAN": -1.635470751264441,
+    "MSE_MEDIAN_TB2": 176.92100731765655,
+    "RMSE_MEDIAN_TB": 13.301165637554348,
+    "R2_MEDIAN": -0.782986000940376,
+    "experts": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINN",
+        "TFKAN",
+        "EXP",
+        "ARIMA",
+        "PROPHET"
+    ],
+    "n_validation_points": 104,
+    "n_experts": 8,
+    "train_gate_size": 78,
+    "unit": "TiB"
+}

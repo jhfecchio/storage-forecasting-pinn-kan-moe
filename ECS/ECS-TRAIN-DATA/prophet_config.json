@@ -1,0 +1,18 @@
+{
+    "model_type": "Prophet",
+    "is_hourly": true,
+    "daily_seasonality": true,
+    "weekly_seasonality": true,
+    "yearly_seasonality": false,
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 10.0,
+    "monthly_seasonality_added": true,
+    "monthly_period": 30.5,
+    "monthly_fourier_order": 8,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "time_unit": "hour",
+    "split_prophet": 4340,
+    "freq_alias": "H",
+    "target_column": "Value"
+}

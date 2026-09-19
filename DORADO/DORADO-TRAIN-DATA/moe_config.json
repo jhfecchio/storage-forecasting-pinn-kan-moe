@@ -1,0 +1,20 @@
+{
+    "model_type": "MixtureOfExperts",
+    "experts": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINN",
+        "TFKAN",
+        "EXP",
+        "ARIMA",
+        "PROPHET"
+    ],
+    "n_experts": 8,
+    "n_features": 13,
+    "train_gate_size": 78,
+    "forecast_steps": 360,
+    "forecast_days": 360,
+    "time_unit": "day",
+    "unit": "TiB"
+}

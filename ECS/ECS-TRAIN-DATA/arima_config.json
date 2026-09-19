@@ -1,0 +1,33 @@
+{
+    "model_type": "ARIMA",
+    "p_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "q_values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "d_value": 1,
+    "best_order": [
+        5,
+        1,
+        1
+    ],
+    "window_reference": 24,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "time_unit": "hour",
+    "train_size": 4339,
+    "train_len": 4315,
+    "test_len": 1061,
+    "reconstruction_base_index": 4362
+}

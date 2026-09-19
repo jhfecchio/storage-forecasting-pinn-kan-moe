@@ -1,0 +1,24 @@
+{
+    "analysis_name": "dist_analysis",
+    "arima_order": [
+        5,
+        1,
+        1
+    ],
+    "split_idx": 4339,
+    "min_len_aligned": 1061,
+    "to_tb_divisor": 1000000000000.0,
+    "models_included": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "TFKAN",
+        "PINT",
+        "EXP",
+        "ARIMA",
+        "PROPHET",
+        "MOE"
+    ],
+    "reference_real_model": "MLP",
+    "qqplots_enabled": false
+}

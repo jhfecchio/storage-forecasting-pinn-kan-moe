@@ -1,0 +1,27 @@
+{
+    "analysis_name": "forecast_combined",
+    "forecast_days": 360,
+    "forecast_steps": 8640,
+    "time_unit": "hour",
+    "available_models": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINT",
+        "TFKAN",
+        "EXP",
+        "ARIMA",
+        "PROPHET",
+        "MOE"
+    ],
+    "window_text_pt": "24/24/24/24/24",
+    "window_text_en": "24/24/24/24/24",
+    "best_order": [
+        5,
+        1,
+        1
+    ],
+    "series_len": 5425,
+    "full_len": 14065,
+    "includes_moe": true
+}

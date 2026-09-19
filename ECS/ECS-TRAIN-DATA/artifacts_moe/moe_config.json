@@ -1,0 +1,20 @@
+{
+    "model": "Mixture of Experts with neural softmax gating",
+    "experts": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINT",
+        "TFKAN",
+        "EXP",
+        "ARIMA",
+        "PROPHET"
+    ],
+    "target_unit": "TB",
+    "forecast_days": 360,
+    "forecast_steps": 8640,
+    "gate_train_fraction": 0.75,
+    "optimizer": "Adam(lr=1e-3, clipnorm=1.0)",
+    "loss": "MSE",
+    "regularization": "Dropout(0.10) + L2(1e-5)"
+}

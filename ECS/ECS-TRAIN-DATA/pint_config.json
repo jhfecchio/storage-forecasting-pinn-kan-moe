@@ -1,0 +1,13 @@
+{
+    "window": 24,
+    "epochs": 200,
+    "batch_size": 64,
+    "omega": 0.2617993877991494,
+    "lambda_phys": 0.0010000000474974513,
+    "dt": 1.0,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "time_unit": "hour",
+    "train_size": 4339,
+    "architecture": "LSTM seq (64->32) + TimeDistributed Dense + Physics Loss"
+}

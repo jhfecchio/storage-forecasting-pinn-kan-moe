@@ -1,0 +1,10 @@
+[
+    "MLP",
+    "LSTM",
+    "GRU",
+    "PINN",
+    "TFKAN",
+    "ETS",
+    "PROPHET",
+    "MOE"
+]

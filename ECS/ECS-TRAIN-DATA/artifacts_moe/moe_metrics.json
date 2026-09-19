@@ -1,0 +1,19 @@
+{
+    "MSE_TB2": 7.541616995964316,
+    "RMSE_TB": 2.7462004653637933,
+    "MAE_TB": 1.8802737522489048,
+    "R2": 0.842799038370672,
+    "experts": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINT",
+        "TFKAN",
+        "EXP",
+        "ARIMA",
+        "PROPHET"
+    ],
+    "n_validation_points": 1061,
+    "n_experts": 8,
+    "train_gate_size": 795
+}

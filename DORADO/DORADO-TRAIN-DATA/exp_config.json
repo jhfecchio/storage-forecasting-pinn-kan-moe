@@ -1,0 +1,16 @@
+{
+    "model_type": "ExponentialSmoothing",
+    "trend": null,
+    "seasonal": null,
+    "window_reference": 24,
+    "forecast_steps": 360,
+    "forecast_days": 360,
+    "time_unit": "day",
+    "train_size": 510,
+    "train_len": 486,
+    "test_len": 104,
+    "reconstruction_base_index": 533,
+    "unit_original": "GB",
+    "unit_converted": "TiB",
+    "conversion_factor": 1024
+}

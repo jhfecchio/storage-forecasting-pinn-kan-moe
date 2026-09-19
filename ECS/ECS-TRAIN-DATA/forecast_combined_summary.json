@@ -1,0 +1,74 @@
+{
+    "MLP": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.173825095552,
+        "final_value_tb": 813.497052129152,
+        "min_value_tb": 396.173825095552,
+        "max_value_tb": 813.497052129152,
+        "mean_value_tb": 604.4964613477523
+    },
+    "LSTM": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.128349841536,
+        "final_value_tb": 633.844257613696,
+        "min_value_tb": 396.111823544192,
+        "max_value_tb": 633.844257613696,
+        "mean_value_tb": 514.8589754831844
+    },
+    "GRU": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.18451830976,
+        "final_value_tb": 577.996428765056,
+        "min_value_tb": 396.18451830976,
+        "max_value_tb": 577.996428765056,
+        "mean_value_tb": 487.0978523839473
+    },
+    "PINT": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.15287281856,
+        "final_value_tb": 483.273366136704,
+        "min_value_tb": 396.15287281856,
+        "max_value_tb": 483.273366136704,
+        "mean_value_tb": 440.22306556975553
+    },
+    "TFKAN": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.139897730944,
+        "final_value_tb": 422.000356059008,
+        "min_value_tb": 396.011755120512,
+        "max_value_tb": 422.000356059008,
+        "mean_value_tb": 409.0898211323405
+    },
+    "EXP": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.139782012467,
+        "final_value_tb": 515.0139230126656,
+        "min_value_tb": 396.139782012467,
+        "max_value_tb": 515.0139230126656,
+        "mean_value_tb": 455.5768525125666
+    },
+    "ARIMA": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.18524959373866,
+        "final_value_tb": 639.004515760373,
+        "min_value_tb": 396.18524959373866,
+        "max_value_tb": 639.004515760373,
+        "mean_value_tb": 517.6034384190681
+    },
+    "PROPHET": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.12602183872,
+        "final_value_tb": 574.0857198330662,
+        "min_value_tb": 396.12602183872,
+        "max_value_tb": 574.095867317694,
+        "mean_value_tb": 485.53120243184975
+    },
+    "MOE": {
+        "forecast_len": 8640,
+        "initial_value_tb": 396.172514557952,
+        "final_value_tb": 810.673198071808,
+        "min_value_tb": 396.172514557952,
+        "max_value_tb": 810.673198071808,
+        "mean_value_tb": 593.8805121890531
+    }
+}

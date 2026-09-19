@@ -1,0 +1,24 @@
+{
+    "analysis_type": "PDF_CDF_KS_QQ_ACF_METRICS",
+    "models": [
+        "MLP",
+        "LSTM",
+        "GRU",
+        "PINN",
+        "TFKAN",
+        "ETS",
+        "PROPHET",
+        "MOE"
+    ],
+    "n_points": 128,
+    "unit": "TiB",
+    "scale": "absolute",
+    "source": "df_comp",
+    "source_unit": "TiB",
+    "conversion_applied": false,
+    "arima_order": [
+        4,
+        1,
+        3
+    ]
+}

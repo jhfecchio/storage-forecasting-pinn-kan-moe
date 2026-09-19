@@ -1,0 +1,9 @@
+{
+    "split_prophet": 511,
+    "series_last_value": 379188.850680176,
+    "series_last_value_tib": 370.30161199235937,
+    "forecast_last_value_tib": 402.4628890361008,
+    "last_timestamp": "2025-09-30 00:00:00",
+    "future_start": "2025-10-01 00:00:00",
+    "future_end": "2026-09-25 00:00:00"
+}

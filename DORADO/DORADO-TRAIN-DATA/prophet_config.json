@@ -1,0 +1,21 @@
+{
+    "model_type": "Prophet",
+    "is_hourly": false,
+    "daily_seasonality": false,
+    "weekly_seasonality": false,
+    "yearly_seasonality": false,
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 10.0,
+    "monthly_seasonality_added": false,
+    "monthly_period": null,
+    "monthly_fourier_order": null,
+    "forecast_steps": 360,
+    "forecast_days": 360,
+    "time_unit": "day",
+    "split_prophet": 511,
+    "freq_alias": "D",
+    "target_column": "value",
+    "unit_original": "GB",
+    "unit_converted": "TiB",
+    "conversion_factor": 1024
+}

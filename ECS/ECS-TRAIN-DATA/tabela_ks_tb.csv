@@ -1,0 +1,10 @@
+Modelo,Estatística KS,p-valor,Interpretação
+MLP,0.1517,0.0,"Distribuições diferentes (p < 0,05)"
+LSTM,0.8313,0.0,"Distribuições diferentes (p < 0,05)"
+GRU,0.2337,0.0,"Distribuições diferentes (p < 0,05)"
+TFKAN,0.5815,0.0,"Distribuições diferentes (p < 0,05)"
+PINT,0.3779,0.0,"Distribuições diferentes (p < 0,05)"
+EXP,0.7276,0.0,"Distribuições diferentes (p < 0,05)"
+ARIMA,0.2564,0.0,"Distribuições diferentes (p < 0,05)"
+PROPHET,0.2356,0.0,"Distribuições diferentes (p < 0,05)"
+MOE,0.2667,0.0,"Distribuições diferentes (p < 0,05)"

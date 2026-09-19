@@ -1,0 +1,9 @@
+{
+    "window": 24,
+    "epochs": 200,
+    "batch_size": 64,
+    "forecast_steps": 360,
+    "forecast_days": 360,
+    "time_unit": "day",
+    "train_size": 510
+}

@@ -1,0 +1,13 @@
+{
+    "model_type": "ExponentialSmoothing",
+    "trend": null,
+    "seasonal": null,
+    "window_reference": 24,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "time_unit": "hour",
+    "train_size": 4339,
+    "train_len": 4315,
+    "test_len": 1061,
+    "reconstruction_base_index": 4362
+}

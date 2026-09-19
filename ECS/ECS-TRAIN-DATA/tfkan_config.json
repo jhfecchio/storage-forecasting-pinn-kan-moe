@@ -1,0 +1,14 @@
+{
+    "window": 24,
+    "epochs": 200,
+    "batch_size": 64,
+    "forecast_steps": 8640,
+    "forecast_days": 360,
+    "forecast_steps_train": 1,
+    "time_unit": "hour",
+    "train_size": 4339,
+    "n_features": 1,
+    "d_model": 128,
+    "learning_rate": 0.0001,
+    "architecture": "TFKAN: freq branch (FFT->KAN->IFFT) + time KAN + predictor KAN"
+}
